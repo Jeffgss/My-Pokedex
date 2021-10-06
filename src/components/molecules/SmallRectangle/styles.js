@@ -4,7 +4,7 @@ export const Container = styled.div`
   width: 40px;
   height: 10px;
   border-radius: 10px;
-  border: 2px solid #492436;
+  border: 2px solid var(--borderColor);
   box-shadow: inset 1px 2px rgb(255 255 255 / 60%);
 
   ${(props) =>
