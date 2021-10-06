@@ -4,7 +4,7 @@ export const Container = styled.div`
   width: 405px;
   position: relative;
 
-  &::after {
+  &::before {
     content: "";
     width: 43.9%;
     height: 3px;
@@ -23,7 +23,7 @@ export const Container = styled.div`
     transform: rotate(146deg);
   }
 
-  &::before {
+  &::after {
     content: "";
     width: 46.9%;
     height: 3px;
