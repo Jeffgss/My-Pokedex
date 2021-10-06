@@ -2,7 +2,7 @@ import React from "react";
 
 import { Container, Content, Header, MainContent } from "./styles";
 
-import Input from "../../components/Input";
+import Input from "../../components/molecules/Input";
 
 const PrincipalPage = () => (
   <>
