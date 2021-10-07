@@ -2,9 +2,9 @@ import React from "react";
 
 import { Container } from "./styles";
 
-const Input = ({ name, placeholder }) => (
+const Input = ({ ...props }) => (
   <Container>
-    <input type="text" name={name} placeholder={placeholder} />
+    <input {...props} />
   </Container>
 );
 
