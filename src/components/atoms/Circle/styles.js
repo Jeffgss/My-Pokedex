@@ -56,4 +56,10 @@ export const Container = styled.div`
     css`
       background: var(--blue);
     `}
+
+    ${(props) =>
+    props.color === "darkBlue" &&
+    css`
+      background: var(--darkBlue);
+    `}
 `;
