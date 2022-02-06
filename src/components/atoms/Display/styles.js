@@ -2,6 +2,7 @@ import styled, { css } from "styled-components";
 
 export const Container = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background: #f8f8f8;
@@ -15,7 +16,13 @@ export const Container = styled.div`
   box-shadow: inset 3px 3px rgb(0 0 0 / 30%);
 
   img {
-    width: 120px;
+    margin-top: ${(props) => props.hasPokemonImage && "-15px"};
+    width: ${(props) => (props.hasPokemonImage ? "100px" : "130px")};
+  }
+
+  span {
+    color: var(--borderColor);
+    font-size: 18px;
   }
 
   ${(props) =>
