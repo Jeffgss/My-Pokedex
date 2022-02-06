@@ -12,14 +12,18 @@ export const PokemonProvider = ({ children }) => {
         const objectPokemon = {
           id: data.id,
           name: data.name,
-          image: data?.sprites.front_default,
+          image: data.sprites.front_default,
+          types: data.types.map((types) => types.type.name),
+          abilities: data.abilities.map((abilities) => abilities.ability.name),
+          hp: data.stats[0].base_stat,
+          attack: data.stats[1].base_stat,
+          defense: data.stats[2].base_stat,
         };
 
         setCatchSearchedPokemon(objectPokemon);
       });
   };
 
-  console.log(catchSearchedPokemon);
   return (
     <PokemonContext.Provider value={{ catchSearchedPokemon, getPokemon }}>
       {children}
