@@ -18,12 +18,17 @@ export const Container = styled.div`
   .squares-and-circle {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   .squares {
     display: flex;
     flex: 1;
-    margin: 10px 5px;
+    margin: 10px 0px;
+
+    > div {
+      margin-right: 10px;
+    }
   }
 
   .rectangles {

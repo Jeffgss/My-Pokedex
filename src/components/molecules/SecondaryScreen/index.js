@@ -5,10 +5,10 @@ import { Container } from "./styles";
 import ScreenEdge from "../../atoms/ScreenEdge";
 import Display from "../../atoms/Display";
 
-const SecondaryScreen = ({ children }) => (
+const SecondaryScreen = () => (
   <Container>
     <ScreenEdge type="secondary">
-      <Display>{children}</Display>
+      <Display />
     </ScreenEdge>
   </Container>
 );
