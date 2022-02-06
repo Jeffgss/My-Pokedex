@@ -4,6 +4,7 @@ import PrimaryScreen from "../../components/molecules/PrimaryScreen";
 import ButtonsLeftSide from "../../components/molecules/ButtonsLeftSide";
 
 import { Container, Content, LeftSideBody } from "./styles";
+import Hingle from "../../components/atoms/Hingle";
 
 const LeftSide = () => (
   <>
@@ -16,6 +17,7 @@ const LeftSide = () => (
           <ButtonsLeftSide />
         </LeftSideBody>
       </Content>
+      <Hingle className="hingle" />
     </Container>
   </>
 );

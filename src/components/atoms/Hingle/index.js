@@ -2,6 +2,6 @@ import React from "react";
 
 import { Container } from "./styles";
 
-const Hingle = () => <Container />;
+const Hingle = (props) => <Container {...props} />;
 
 export default Hingle;

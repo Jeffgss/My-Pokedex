@@ -5,6 +5,13 @@ export const Container = styled.div`
   width: 425px;
   padding: 10px;
   background: #98121b;
+  position: relative;
+
+  .hingle {
+    position: absolute;
+    right: -11px;
+    top: 92px;
+  }
 `;
 
 export const Content = styled.div`
