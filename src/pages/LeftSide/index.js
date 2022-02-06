@@ -1,11 +1,9 @@
-import React from "react";
-
-import { Container, Content } from "./styles";
-
 import HeaderLeftSide from "../../components/molecules/HeaderLeftSide";
 import Divider from "../../components/atoms/Divider";
 import PrimaryScreen from "../../components/molecules/PrimaryScreen";
 import ButtonsLeftSide from "../../components/molecules/ButtonsLeftSide";
+
+import { Container, Content, LeftSideBody } from "./styles";
 
 const LeftSide = () => (
   <>
@@ -13,11 +11,10 @@ const LeftSide = () => (
       <Content>
         <HeaderLeftSide />
         <Divider />
-
-        <div className="left-side-body">
+        <LeftSideBody>
           <PrimaryScreen />
           <ButtonsLeftSide />
-        </div>
+        </LeftSideBody>
       </Content>
     </Container>
   </>

@@ -15,19 +15,18 @@ export const Content = styled.div`
   justify-content: space-around;
   flex-direction: column;
   align-items: center;
+`;
 
-  .left-side-body {
-    height: 311.5px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
+export const LeftSideBody = styled.div`
+  height: 311.5px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 
-    border-left: 3px solid var(--borderColor);
-    border-bottom: 3px solid var(--borderColor);
+  border-left: 3px solid var(--borderColor);
+  border-bottom: 3px solid var(--borderColor);
 
-    box-shadow: inset 3px 0 rgb(252 245 216 / 60%),
-      inset 0 -3px rgb(0 0 0 / 20%);
-  }
+  box-shadow: inset 3px 0 rgb(252 245 216 / 60%), inset 0 -3px rgb(0 0 0 / 20%);
 `;
