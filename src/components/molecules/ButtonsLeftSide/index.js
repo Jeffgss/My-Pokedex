@@ -10,12 +10,15 @@ import { Container, Rectangles, SmallRectangles } from "./styles";
 
 const ButtonsLeftSide = () => {
   const [searchPokemon, setSearchPokemon] = useState("");
+
   const { getPokemon } = useContext(PokemonContext);
 
   const handleGetPokemon = (event) => {
     event.preventDefault();
+    const searchPokemonToLowerCase = searchPokemon.toLowerCase();
 
-    getPokemon(searchPokemon);
+    if (searchPokemonToLowerCase.length > 0)
+      getPokemon(searchPokemonToLowerCase);
   };
 
   return (
@@ -31,7 +34,9 @@ const ButtonsLeftSide = () => {
             name="pokemon"
             className="mini-display"
             placeholder="Pokémon"
-            onInput={(event) => setSearchPokemon(event.target.value)}
+            onInput={(event) => {
+              setSearchPokemon(event.target.value);
+            }}
           />
         </form>
       </Rectangles>

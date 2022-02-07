@@ -13,8 +13,6 @@ const SecondaryScreen = () => {
   const pokemonAttack = pokemon.catchSearchedPokemon.attack;
   const pokemonDefense = pokemon.catchSearchedPokemon.defense;
 
-  console.log(!!pokemon);
-
   return (
     <Container>
       <ScreenEdge type="secondary">

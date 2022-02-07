@@ -16,13 +16,14 @@ export const Container = styled.div`
   box-shadow: inset 3px 3px rgb(0 0 0 / 30%);
 
   img {
-    margin-top: ${(props) => props.hasPokemonImage && "-15px"};
+    margin-top: ${(props) => props.hasPokemonImage && "-10px"};
     width: ${(props) => (props.hasPokemonImage ? "100px" : "130px")};
   }
 
   span {
     color: var(--borderColor);
     font-size: 18px;
+    text-transform: capitalize;
   }
 
   ${(props) =>
