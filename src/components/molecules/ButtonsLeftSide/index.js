@@ -15,7 +15,7 @@ const ButtonsLeftSide = () => {
 
   const handleGetPokemon = (event) => {
     event.preventDefault();
-    const searchPokemonToLowerCase = searchPokemon.toLowerCase();
+    const searchPokemonToLowerCase = searchPokemon.toLowerCase().trim();
 
     if (searchPokemonToLowerCase.length > 0)
       getPokemon(searchPokemonToLowerCase);
