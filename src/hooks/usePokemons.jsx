@@ -1,6 +1,6 @@
-import { createContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 
-export const PokemonContext = createContext({});
+const PokemonsContext = createContext({});
 
 export const PokemonProvider = ({ children }) => {
   const [catchSearchedPokemon, setCatchSearchedPokemon] = useState({});
@@ -38,8 +38,14 @@ export const PokemonProvider = ({ children }) => {
   };
 
   return (
-    <PokemonContext.Provider value={{ catchSearchedPokemon, getPokemon }}>
+    <PokemonsContext.Provider value={{ catchSearchedPokemon, getPokemon }}>
       {children}
-    </PokemonContext.Provider>
+    </PokemonsContext.Provider>
   );
+};
+
+export const usePokemons = () => {
+  const context = useContext(PokemonsContext);
+
+  return context;
 };

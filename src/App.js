@@ -1,6 +1,6 @@
 import React from "react";
 
-import { PokemonProvider } from "./PokeContext";
+import { PokemonProvider } from "./hooks/usePokemons";
 
 import LeftSide from "./pages/LeftSide";
 import RightSide from "./pages/RightSide";

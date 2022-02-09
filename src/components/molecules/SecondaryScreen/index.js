@@ -4,10 +4,10 @@ import { Container } from "./styles";
 
 import ScreenEdge from "../../atoms/ScreenEdge";
 import Display from "../../atoms/Display";
-import { PokemonContext } from "../../../PokeContext";
+import { usePokemons } from "../../../hooks/usePokemons";
 
 const SecondaryScreen = () => {
-  const pokemon = useContext(PokemonContext);
+  const pokemon = usePokemons();
   const pokemonTypes = pokemon.catchSearchedPokemon.types;
   const pokemonHp = pokemon.catchSearchedPokemon.hp;
   const pokemonAttack = pokemon.catchSearchedPokemon.attack;

@@ -1,17 +1,17 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 
 import Circle from "../../atoms/Circle";
 import SmallRectangle from "../../atoms/SmallRectangle";
 import Input from "../../molecules/Input";
 import Directional from "../../molecules/Directional";
-import { PokemonContext } from "../../../PokeContext";
 
 import { Container, Rectangles, SmallRectangles } from "./styles";
+import { usePokemons } from "../../../hooks/usePokemons";
 
 const ButtonsLeftSide = () => {
   const [searchPokemon, setSearchPokemon] = useState("");
 
-  const { getPokemon } = useContext(PokemonContext);
+  const { getPokemon } = usePokemons();
 
   const handleGetPokemon = (event) => {
     event.preventDefault();
