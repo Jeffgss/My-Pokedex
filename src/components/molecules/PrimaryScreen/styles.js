@@ -6,6 +6,20 @@ export const Container = styled.div`
     align-items: center;
     flex-direction: column;
     padding: 5px;
+
+    img {
+      cursor: ${(props) => (props.havePokemonToClick ? "pointer" : "default")};
+    }
+
+    span {
+      color: var(--darkBlue);
+      font-weight: 500;
+    }
+
+    span:nth-child(3) {
+      color: var(--borderColor);
+      font-weight: 400;
+    }
   }
 `;
 

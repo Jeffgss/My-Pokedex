@@ -14,7 +14,7 @@ const PrimaryScreen = () => {
   const showMoreDetails = pokemon.setShowMoreDetails;
 
   return (
-    <Container>
+    <Container havePokemonToClick={pokemonImg}>
       <ScreenEdge>
         <Circles>
           <Circle size="super-small" color="red" />
