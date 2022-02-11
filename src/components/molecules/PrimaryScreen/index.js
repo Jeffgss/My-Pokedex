@@ -1,9 +1,9 @@
 import ScreenEdge from "../../atoms/ScreenEdge";
 import Display from "../../atoms/Display";
 import Circle from "../../atoms/Circle";
+import { usePokemons } from "../../../hooks/usePokemons";
 
 import { Container, Circles } from "./styles";
-import { usePokemons } from "../../../hooks/usePokemons";
 
 const PrimaryScreen = () => {
   const defaultImage =
@@ -11,6 +11,7 @@ const PrimaryScreen = () => {
   const pokemon = usePokemons();
   const pokemonImg = pokemon.catchSearchedPokemon.image;
   const pokemonName = pokemon.catchSearchedPokemon.name;
+  const showMoreDetails = pokemon.setShowMoreDetails;
 
   return (
     <Container>
@@ -23,6 +24,7 @@ const PrimaryScreen = () => {
           <img
             src={pokemonImg ? pokemonImg : defaultImage}
             alt={pokemonName ? pokemonName : "PokeBall"}
+            onClick={() => showMoreDetails(true)}
           />
           {pokemonName && <span>{pokemonName}</span>}
         </Display>

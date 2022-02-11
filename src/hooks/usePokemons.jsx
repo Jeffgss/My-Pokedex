@@ -4,6 +4,7 @@ const PokemonsContext = createContext({});
 
 export const PokemonProvider = ({ children }) => {
   const [catchSearchedPokemon, setCatchSearchedPokemon] = useState({});
+  const [showMoreDetails, setShowMoreDetails] = useState(false);
 
   const getPokemon = (searchedPokemon) => {
     try {
@@ -24,11 +25,12 @@ export const PokemonProvider = ({ children }) => {
                 defense: data.stats[2].base_stat,
               };
 
+              setShowMoreDetails(false);
               setCatchSearchedPokemon(objectPokemon);
             });
           } else {
             alert("Failed to fetch. Try again!");
-            setCatchSearchedPokemon("");
+            setCatchSearchedPokemon({});
           }
         }
       );
@@ -38,7 +40,14 @@ export const PokemonProvider = ({ children }) => {
   };
 
   return (
-    <PokemonsContext.Provider value={{ catchSearchedPokemon, getPokemon }}>
+    <PokemonsContext.Provider
+      value={{
+        catchSearchedPokemon,
+        getPokemon,
+        showMoreDetails,
+        setShowMoreDetails,
+      }}
+    >
       {children}
     </PokemonsContext.Provider>
   );

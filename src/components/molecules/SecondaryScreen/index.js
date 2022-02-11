@@ -1,10 +1,8 @@
-import React, { useContext } from "react";
-
-import { Container } from "./styles";
-
 import ScreenEdge from "../../atoms/ScreenEdge";
 import Display from "../../atoms/Display";
 import { usePokemons } from "../../../hooks/usePokemons";
+
+import { Container } from "./styles";
 
 const SecondaryScreen = () => {
   const pokemon = usePokemons();
@@ -12,12 +10,13 @@ const SecondaryScreen = () => {
   const pokemonHp = pokemon.catchSearchedPokemon.hp;
   const pokemonAttack = pokemon.catchSearchedPokemon.attack;
   const pokemonDefense = pokemon.catchSearchedPokemon.defense;
+  const showMoreDetails = pokemon.showMoreDetails;
 
   return (
     <Container>
       <ScreenEdge type="secondary">
         <Display>
-          {pokemonTypes && (
+          {pokemonTypes && showMoreDetails && (
             <>
               <span>
                 Hp: <strong>{pokemonHp}</strong>
