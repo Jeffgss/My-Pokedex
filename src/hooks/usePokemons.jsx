@@ -43,6 +43,7 @@ export const PokemonProvider = ({ children }) => {
     <PokemonsContext.Provider
       value={{
         catchSearchedPokemon,
+        setCatchSearchedPokemon,
         getPokemon,
         showMoreDetails,
         setShowMoreDetails,

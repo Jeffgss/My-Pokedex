@@ -10,6 +10,8 @@ import { usePokemons } from "../../../hooks/usePokemons";
 
 const ButtonsLeftSide = () => {
   const [searchPokemon, setSearchPokemon] = useState("");
+  const pokemon = usePokemons();
+  const pokemonReset = pokemon.setCatchSearchedPokemon;
 
   const { getPokemon } = usePokemons();
 
@@ -21,9 +23,16 @@ const ButtonsLeftSide = () => {
       getPokemon(searchPokemonToLowerCase);
   };
 
+  const handleResetSearch = () => {
+    pokemonReset("");
+    setSearchPokemon("");
+  };
+
   return (
     <Container>
-      <Circle size="medium" color="darkBlue" />
+      <Circle size="medium" color="darkBlue" onClick={handleResetSearch}>
+        <span>Reset</span>
+      </Circle>
       <Rectangles>
         <SmallRectangles>
           <SmallRectangle color="red" />
@@ -34,9 +43,8 @@ const ButtonsLeftSide = () => {
             name="pokemon"
             className="mini-display"
             placeholder="Pokémon"
-            onInput={(event) => {
-              setSearchPokemon(event.target.value);
-            }}
+            onChange={(event) => setSearchPokemon(event.target.value)}
+            value={searchPokemon}
           />
         </form>
       </Rectangles>
