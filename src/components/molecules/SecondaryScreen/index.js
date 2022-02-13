@@ -15,7 +15,7 @@ const SecondaryScreen = () => {
   return (
     <Container>
       <ScreenEdge type="secondary">
-        <Display>
+        <Display isOn={pokemonTypes && showMoreDetails}>
           {pokemonTypes && showMoreDetails && (
             <>
               <span>

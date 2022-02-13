@@ -12,13 +12,11 @@ export const Container = styled.div`
     }
 
     span {
-      color: var(--darkBlue);
       font-weight: 500;
     }
 
     span:nth-child(3) {
       color: var(--borderColor);
-      font-weight: 400;
     }
   }
 `;

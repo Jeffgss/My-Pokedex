@@ -20,7 +20,7 @@ const PrimaryScreen = () => {
           <Circle size="super-small" color="red" />
           <Circle size="super-small" color="red" />
         </Circles>
-        <Display hasPokemonImage={pokemonImg}>
+        <Display hasPokemonImage={pokemonImg} isOn={true}>
           <img
             src={pokemonImg ? pokemonImg : defaultImage}
             alt={pokemonName ? pokemonName : "PokeBall"}
