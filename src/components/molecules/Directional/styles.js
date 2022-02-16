@@ -15,12 +15,16 @@ export const Container = styled.div`
     left: 26px;
   }
 
-  > div {
-    background: var(--darkBlue);
+  button {
     width: 26px;
     height: 26px;
     position: absolute;
+    background: var(--darkBlue);
     border: 2px solid var(--borderColor);
+
+    &:active {
+      box-shadow: 0 5px rgb(0 0 0 / 20%);
+    }
   }
 
   .top {
