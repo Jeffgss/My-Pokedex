@@ -8,9 +8,9 @@
 ![GitHub top language](https://img.shields.io/github/languages/top/Jeffgss/My-Pokedex?color=%23f7df1e&style=flat-square)
 
   <p align="center" >
-    <a href="#🔥-prévia-da-aplicação"> 🔥 Prévia da Aplicação</a> |
-    <a href="#🚀-tecnologias-usadas"> 🚀 Tecnologias Usadas</a> |
-    <a href="#⚡️-executando-o-projeto"> ⚡️ Executando o Projeto </a> 
+    <a href="#-prévia-da-aplicação"> 🔥 Prévia da Aplicação</a> |
+    <a href="#-tecnologias-usadas"> 🚀 Tecnologias Usadas</a> |
+    <a href="#%EF%B8%8F-executando-o-projeto"> ⚡️ Executando o Projeto </a> 
   </p>
 </div>
 
